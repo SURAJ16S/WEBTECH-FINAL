@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
+
 
 function App() {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    axios.get("https://jsonplaceholder.typicode.com/users") // 👈 local JSON file
+  function fetchData() {
+    setLoading(true);
+    axios.get("/data.json")   //https://jsonplaceholder.typicode.com/users
       .then(res => {
         console.dir(res.data);
         setData(res.data);
@@ -17,17 +19,21 @@ function App() {
         setError("Failed to load data");
         setLoading(false);
       });
-  }, []);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>;
+  }
 
   return (
     <div>
       <h2>User List</h2>
+      <button onClick={fetchData}>Fetch Data</button>
+
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
+
       <ul>
-        {data.map(user => (
-          <li key={user.id}>{user.name} - {user.email}</li>
+        {data.map((user) => (
+          <li >
+            {user.name} - {user.age} - {user.country}
+          </li>
         ))}
       </ul>
     </div>
