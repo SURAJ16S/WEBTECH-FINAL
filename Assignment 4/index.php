@@ -1,5 +1,5 @@
 <?php   
-$connect = new mysqli("localhost", "root", "bugsploit", "school"); //new mysqli() :constructor for mysql class , handles db connections 
+$connect = new mysqli("localhost", "root", "yourpassword", "school"); //new mysqli() :constructor for mysql class , handles db connections 
 
 // Create
 if(isset($_POST['add'])){
