@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function App() {
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [form, setForm] = useState({ name: "", email: "", password: "" }); //store in json format
   const [error, setError] = useState("");
 
   function handleChange(e) {
