@@ -1,5 +1,5 @@
 <?php
-$connect = new mysqli("localhost","root","bugsploit","school");
+$connect = new mysqli("localhost","root","yourpass","school");
 
 //add
 if(isset($_POST['add'])){
