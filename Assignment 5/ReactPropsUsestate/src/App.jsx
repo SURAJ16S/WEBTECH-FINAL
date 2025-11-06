@@ -5,6 +5,10 @@ import './App.css'
 import DisplayMyName from './Component.jsx'
 import Card from './components/card.jsx'
 
+function PrintProps(prop){
+  return <h1>My name is {prop.name} {prop.surname} using props</h1>
+}
+
 function App() {
   const [count, setCount] = useState(0)
   const [name, setName] = useState('suraj')
@@ -15,7 +19,6 @@ function App() {
   return (
     <>
      
-  
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
@@ -25,6 +28,7 @@ function App() {
       
       <DisplayMyName />
       <Card />
+      <PrintProps name="Suraj" surname="Bagul" />
       </div>
           <button onClick={() => setCount((count) => count + 1)}>increment</button>
         <button onClick={() => setCount((count) => count - 1)}>decrement</button>

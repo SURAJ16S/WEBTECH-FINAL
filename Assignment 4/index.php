@@ -55,6 +55,6 @@ $result = $connect->query("SELECT * FROM students");
   </form>
 </tr>
 <?php endwhile; ?>
-</table>
+
 </body>
 </html>
