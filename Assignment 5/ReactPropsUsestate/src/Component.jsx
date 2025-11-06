@@ -1,8 +1,8 @@
 function DisplayMyName(){
     return (
         <>                      {/* function can return a single thing, so return multiple thing we use the concept of fragment , in which empty tags are used to encapsulate multiple things*/}
-    <h1>My Name is Suraj</h1>
-    <h1 style={ { color:'red' , border:'4px solid white'}}>My Age is 20</h1>
+    <h1>My Name is Username</h1>
+    <h1 style={ { color:'red' , border:'4px solid white'}}>My Age is 19</h1>
       
 </>
 )
@@ -21,7 +21,7 @@ export default DisplayMyName
         export function NamePrint(){
             return(
                 <>
-                    <h1>Suraj</h1>
+                    <h1>test user</h1>
                 </>
             )
         }

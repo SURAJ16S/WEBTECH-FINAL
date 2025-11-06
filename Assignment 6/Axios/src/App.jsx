@@ -30,7 +30,7 @@ function App() {
       {error && <p>{error}</p>}
 
       <ul>
-        {data.map((user) => (
+        {data.map((user) => (         //traverse one by one and pass data into user
           <li >
             {user.name} - {user.age} - {user.country}
           </li>
