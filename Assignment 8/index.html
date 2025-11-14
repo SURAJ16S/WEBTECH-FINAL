@@ -12,6 +12,7 @@
         async function loadStudents() {
             const res = await fetch('/students');
             const data = await res.json();
+            console.dir(data)
             document.getElementById('output').textContent = JSON.stringify(data, null, 2);
         }
     </script>
